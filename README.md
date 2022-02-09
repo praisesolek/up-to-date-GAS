@@ -14,8 +14,8 @@ This section is fairly short. I mainly just want to elaborate on how I intend to
 * I am leaning closer to the side of self-contained changes to code. Things that depend on outside features to make sense, like GameplayCues supporting MetaSounds, is not making it into the plugin for 4.27.2 because, in that example, that's a separate module for 5.0 entirely. 
 * An exception to the above rule is if the change is extremely minimal. For example, there is a [commit](https://github.com/EpicGames/UnrealEngine/commit/e24e5d7ae418dc80b97495f7fb157f043025dadf) that adds a single constant to `NetworkVersion.h` to work. I saw that as wildly unobtrusive and trivial so I just did it.
 
-## Changelist *(still a work-in-progress to retroactively document all of this)*
-
+## Diff list *(still a work-in-progress to retroactively document all of this)*
+This is a section dedicated to describing the differences between code in the current iteration of the 5.0 branch and this repo. Note that commits made that don't have to be adjusted to work on 4.27.2 won't show up here. This is only to detail commits I modified to retrofit into 4.27.2.
 * There's a change to a more lightweight representation of Actors in memory and the TargetActor classes that do collision traces are all affected by it. It seems totally self-contained as a rewrite of the way `FHitResult`'s hit actor is accessed. Reverting to the old calls made no difference. [Commit](https://github.com/EpicGames/UnrealEngine/commit/eb2edb9b69ffcc8e83d54018fd0f271c4dce6c68)
 * The new GameplayCues support a lens effect from Niagara particles that is not yet in UE release. Reverting to using the `AEmitterCameraLensEffectBase` class is just fine, though. [Commit](https://github.com/EpicGames/UnrealEngine/commit/bb38d4afa77c5bf23947dc6a247ac9b4bafe7609)
 * The new GameplayCues support MetaSounds (the procedural sounds). This is all new code, so deleting it should make zero difference. [Commit](https://github.com/EpicGames/UnrealEngine/commit/bf19dcdaee0bd35d4dcd212dd19f35608d1a0d19)
