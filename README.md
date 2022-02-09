@@ -1,2 +1,8 @@
 # up-to-date-GAS
 A port of Unreal Engine's GameplayAbilities plugin that keeps up to date with all the changes in the repository that it can.
+
+## Introduction
+I work intensely with GameplayAbilities. I've always seen it as a powerful tool for creating multiplayer gameplay. However, it's very far-removed from Unreal Engine's main development plans and processes; it's one of those modules in the engine that just gets updated in the open-source and the changes just make it to the main releases. The result of this disconnect is a delay in my ability to use the new innovations and changes.
+I like solving problems, and this one is actually shockingly easy to begin solving. Since I work in a compiled version of the engine already, so that I can make specialized server and client builds, I have granular access to the editor and engine code. The only thing stopping me now is the work behind going through an inordinate number of commits to the main Unreal repo and figuring out which things to keep and which things to leave out. More on that in a moment.
+Before I get deep into the specifics of the changes made, I want to ward off any misconceptions and make sure we're all on the same page.
+* This is only reasonably implementable in a compiled editor instance. This one's fairly self-explanatory since the versions installed from the Epic Games Launcher, when they update, could cause unpredictable behavior with edited code. NOTE: this is based off an assumption of software development to not mess with things that update and edit themselves without full knowledge of that, and I plan on doing more research in the future. This will be updated accordingly once that's done.
