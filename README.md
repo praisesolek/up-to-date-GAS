@@ -1,4 +1,7 @@
 # up-to-date-GAS
+
+(DISCONTINUED SINCE UE5 FULL RELEASE, might be restarted later if needs be)
+
 A fork of Unreal Engine's [GameplayAbilitiesSystem](https://docs.unrealengine.com/4.27/en-US/InteractiveExperiences/GameplayAbilitySystem/) (GAS) plugin that keeps up to date with all the changes in the repository that it can.
 
 ## Introduction
